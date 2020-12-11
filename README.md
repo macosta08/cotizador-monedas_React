@@ -16,7 +16,7 @@ Tales como:
 
 Los cuales fueron:
 
-### `useCriptomonedas y useMonedas`
+### `useCriptomonedas`
 ### `useMonedas`
 
 Se realizó `consumo de API`:
