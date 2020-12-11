@@ -17,8 +17,9 @@ Tales como:
 Los cuales fueron:
 
 ### `useCriptomonedas y useMonedas`
+### `useMonedas`
 
+Se realizó `consumo de API`:
 
-### `Consumo de API` 
-(https://www.cryptocompare.com/).
+***(https://www.cryptocompare.com/)***.
 
