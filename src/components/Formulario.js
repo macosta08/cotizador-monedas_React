@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styled from "@emotion/styled";
-import axios from "axios";
-import useMoneda from "../hooks/useMoneda";
-import useCriptomonedas from "../hooks/useCriptomonedas";
+
 import Error from "./Error";
+import useMoneda from "../hooks/useMoneda";
+import useCriptomoneda from "../hooks/useCriptomoneda";
+import axios from "axios";
 
 const Boton = styled.input`
   margin-top: 20px;
-  font-weigth: bold;
+  font-weight: bold;
   font-size: 20px;
   padding: 10px;
   background-color: #66a2fe;
@@ -16,14 +17,13 @@ const Boton = styled.input`
   border-radius: 10px;
   color: #fff;
   transition: background-color 0.3s ease;
-
   &:hover {
     background-color: #326ac0;
     cursor: pointer;
   }
 `;
 
-const Formulario = (guardarMoneda, guardarCriptomoneda) => {
+const Formulario = ({ guardarMoneda, guardarCriptomoneda }) => {
   // state del listado de criptomonedas
   const [listacripto, guardarCriptomonedas] = useState([]);
   const [error, guardarError] = useState(false);
@@ -39,7 +39,7 @@ const Formulario = (guardarMoneda, guardarCriptomoneda) => {
   const [moneda, SelectMonedas] = useMoneda("Elige tu Moneda", "", MONEDAS);
 
   // utilizar useCriptomoneda
-  const [criptomoneda, SelectCripto] = useCriptomonedas(
+  const [criptomoneda, SelectCripto] = useCriptomoneda(
     "Elige tu Criptomoneda",
     "",
     listacripto
@@ -73,11 +73,15 @@ const Formulario = (guardarMoneda, guardarCriptomoneda) => {
     guardarMoneda(moneda);
     guardarCriptomoneda(criptomoneda);
   };
+
   return (
     <form onSubmit={cotizarMoneda}>
       {error ? <Error mensaje="Todos los campos son obligatorios" /> : null}
+
       <SelectMonedas />
+
       <SelectCripto />
+
       <Boton type="submit" value="Calcular" />
     </form>
   );
