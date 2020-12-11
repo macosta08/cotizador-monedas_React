@@ -21,5 +21,5 @@ Los cuales fueron:
 
 Se realizó `consumo de API`:
 
-***(https://www.cryptocompare.com/)***.
+***https://www.cryptocompare.com/***.
 
