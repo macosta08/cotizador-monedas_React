@@ -1,6 +1,6 @@
 # Proyecto Sobre Cotizador de Criptomonedas
 
-Este proyecto fue creado con REACT, hacer click [aquí](https://cotizador-criptomonedas-macosta08.netlify.app/) para ver el proyecto .
+Este proyecto fue creado con ***REACT***, hacer click [aquí](https://cotizador-criptomonedas-macosta08.netlify.app/) para ver el proyecto .
 
 ## Se utilizaron HOOKS
 
